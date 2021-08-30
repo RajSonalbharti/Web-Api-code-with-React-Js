@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sonali_123Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Aggregate_Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aggregate_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aggregate_Tbl1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_tbl">
+    <Key>
+      <PropertyRef Name="C_Id" />
+    </Key>
+    <Property Name="C_Id" Type="Int32" Nullable="false" />
+    <Property Name="C_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="C_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="orders" Relationship="Self.FK__order__C_Id__01142BA1" FromRole="Customer_tbl" ToRole="order" />
+  </EntityType>
+  <EntityType Name="Employee_Manager">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Manager_Id" Type="Int32" />
+    <Property Name="Manager_salary" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Groupby_Emp">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_Name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="salary" Type="Int32" Nullable="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dept_Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="Ord_Id" />
+    </Key>
+    <Property Name="Ord_Id" Type="Int32" Nullable="false" />
+    <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price_of_1" Type="Int32" />
+    <Property Name="C_Id" Type="Int32" />
+    <NavigationProperty Name="Customer_tbl" Relationship="Self.FK__order__C_Id__01142BA1" FromRole="order" ToRole="Customer_tbl" />
+  </EntityType>
+  <EntityType Name="Teacher_tbl">
+    <Key>
+      <PropertyRef Name="T_Id" />
+    </Key>
+    <Property Name="T_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T_Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T_Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher_tbl2">
+    <Key>
+      <PropertyRef Name="T_Id" />
+    </Key>
+    <Property Name="T_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="T_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T_Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="T_Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voter_list">
+    <Key>
+      <PropertyRef Name="Voter_Id" />
+    </Key>
+    <Property Name="Voter_Id" Type="Int32" Nullable="false" />
+    <Property Name="Voter_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Voter_Age" Type="Int32" Nullable="false" />
+    <Property Name="Voter_Add" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department_1">
+    <Key>
+      <PropertyRef Name="Dept_Id" />
+      <PropertyRef Name="Dept_Name" />
+      <PropertyRef Name="Dept_Salary" />
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Dept_Id" Type="Int32" Nullable="false" />
+    <Property Name="Dept_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dept_Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpName" />
+      <PropertyRef Name="EmpDpt" />
+      <PropertyRef Name="Salary" />
+    </Key>
+    <Property Name="EmpID" Type="Int32" />
+    <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmpDpt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_1">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+      <PropertyRef Name="Emp_Name" />
+      <PropertyRef Name="Emp_Email" />
+      <PropertyRef Name="Designation" />
+    </Key>
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Emp_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Football_Participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Hocky_Participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__order__C_Id__01142BA1">
+    <End Role="Customer_tbl" Type="Self.Customer_tbl" Multiplicity="0..1" />
+    <End Role="order" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer_tbl">
+        <PropertyRef Name="C_Id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="C_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sonali_123Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Aggregate_Table" EntityType="Self.Aggregate_Table" />
+    <EntitySet Name="Aggregate_Tbl" EntityType="Self.Aggregate_Tbl" />
+    <EntitySet Name="Aggregate_Tbl1" EntityType="Self.Aggregate_Tbl1" />
+    <EntitySet Name="Customer_tbl" EntityType="Self.Customer_tbl" />
+    <EntitySet Name="Employee_Manager" EntityType="Self.Employee_Manager" />
+    <EntitySet Name="Groupby_Emp" EntityType="Self.Groupby_Emp" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="Teacher_tbl" EntityType="Self.Teacher_tbl" />
+    <EntitySet Name="Teacher_tbl2" EntityType="Self.Teacher_tbl2" />
+    <EntitySet Name="Voter_list" EntityType="Self.Voter_list" />
+    <EntitySet Name="Department_1" EntityType="Self.Department_1" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employee_1" EntityType="Self.Employee_1" />
+    <EntitySet Name="Football_Participants" EntityType="Self.Football_Participants" />
+    <EntitySet Name="Hocky_Participants" EntityType="Self.Hocky_Participants" />
+    <AssociationSet Name="FK__order__C_Id__01142BA1" Association="Self.FK__order__C_Id__01142BA1">
+      <End Role="Customer_tbl" EntitySet="Customer_tbl" />
+      <End Role="order" EntitySet="orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

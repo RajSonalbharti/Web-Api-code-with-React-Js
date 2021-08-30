@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sonali_123Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aggregate_Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aggregate_Tbl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aggregate_Tbl1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer_tbl">
+    <Key>
+      <PropertyRef Name="C_Id" />
+    </Key>
+    <Property Name="C_Id" Type="int" Nullable="false" />
+    <Property Name="C_Name" Type="varchar" MaxLength="50" />
+    <Property Name="C_Address" Type="varchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sonali_123.dbo.Department_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Department_1">
+    <Key>
+      <PropertyRef Name="Dept_Id" />
+      <PropertyRef Name="Dept_Name" />
+      <PropertyRef Name="Dept_Salary" />
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Dept_Id" Type="int" Nullable="false" />
+    <Property Name="Dept_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Dept_Salary" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Emp_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sonali_123.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpName" />
+      <PropertyRef Name="EmpDpt" />
+      <PropertyRef Name="Salary" />
+    </Key>
+    <Property Name="EmpID" Type="int" />
+    <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpDpt" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Salary" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sonali_123.dbo.Employee_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee_1">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+      <PropertyRef Name="Emp_Name" />
+      <PropertyRef Name="Emp_Email" />
+      <PropertyRef Name="Designation" />
+    </Key>
+    <Property Name="Emp_Id" Type="int" Nullable="false" />
+    <Property Name="Emp_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Emp_Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_Manager">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="int" Nullable="false" />
+    <Property Name="Emp_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Manager_Id" Type="int" />
+    <Property Name="Manager_salary" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sonali_123.dbo.Football_Participants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Football_Participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Groupby_Emp">
+    <Key>
+      <PropertyRef Name="Emp_Id" />
+    </Key>
+    <Property Name="Emp_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Emp_Name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="Dept_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'sonali_123.dbo.Hocky_Participants' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Hocky_Participants">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="Ord_Id" />
+    </Key>
+    <Property Name="Ord_Id" Type="int" Nullable="false" />
+    <Property Name="Item" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price_of_1" Type="int" />
+    <Property Name="C_Id" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'sonali_123.dbo.Student_Bio_Data' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Student_Bio_Data">
+          <Property Name="STDI" Type="int" />
+          <Property Name="STD_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="FATHER_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="ROLL_NO" Type="int" />
+          <Property Name="CLASS" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="Teacher_tbl">
+    <Key>
+      <PropertyRef Name="T_Id" />
+    </Key>
+    <Property Name="T_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="T_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="T_Qualification" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="T_Salary" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher_tbl2">
+    <Key>
+      <PropertyRef Name="T_Id" />
+    </Key>
+    <Property Name="T_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="T_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="T_Qualification" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="T_Salary" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Voter_list">
+    <Key>
+      <PropertyRef Name="Voter_Id" />
+    </Key>
+    <Property Name="Voter_Id" Type="int" Nullable="false" />
+    <Property Name="Voter_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Voter_Age" Type="int" Nullable="false" />
+    <Property Name="Voter_Add" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__order__C_Id__01142BA1">
+    <End Role="Customer_tbl" Type="Self.Customer_tbl" Multiplicity="0..1" />
+    <End Role="order" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer_tbl">
+        <PropertyRef Name="C_Id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="C_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sonali_123ModelStoreContainer">
+    <EntitySet Name="Aggregate_Table" EntityType="Self.Aggregate_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Aggregate_Tbl" EntityType="Self.Aggregate_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Aggregate_Tbl1" EntityType="Self.Aggregate_Tbl1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_tbl" EntityType="Self.Customer_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Manager" EntityType="Self.Employee_Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Groupby_Emp" EntityType="Self.Groupby_Emp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher_tbl" EntityType="Self.Teacher_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher_tbl2" EntityType="Self.Teacher_tbl2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Voter_list" EntityType="Self.Voter_list" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department_1" EntityType="Self.Department_1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Department_1].[Dept_Id] AS [Dept_Id], 
+    [Department_1].[Dept_Name] AS [Dept_Name], 
+    [Department_1].[Dept_Salary] AS [Dept_Salary], 
+    [Department_1].[Emp_Id] AS [Emp_Id]
+    FROM [dbo].[Department_1] AS [Department_1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employee" EntityType="Self.Employee" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee].[EmpID] AS [EmpID], 
+    [Employee].[EmpName] AS [EmpName], 
+    [Employee].[EmpDpt] AS [EmpDpt], 
+    [Employee].[Salary] AS [Salary]
+    FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employee_1" EntityType="Self.Employee_1" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee_1].[Emp_Id] AS [Emp_Id], 
+    [Employee_1].[Emp_Name] AS [Emp_Name], 
+    [Employee_1].[Emp_Email] AS [Emp_Email], 
+    [Employee_1].[Designation] AS [Designation]
+    FROM [dbo].[Employee_1] AS [Employee_1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Football_Participants" EntityType="Self.Football_Participants" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Football_Participants].[Id] AS [Id], 
+    [Football_Participants].[Name] AS [Name], 
+    [Football_Participants].[Email] AS [Email]
+    FROM [dbo].[Football_Participants] AS [Football_Participants]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Hocky_Participants" EntityType="Self.Hocky_Participants" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Hocky_Participants].[Id] AS [Id], 
+    [Hocky_Participants].[Name] AS [Name], 
+    [Hocky_Participants].[Email] AS [Email]
+    FROM [dbo].[Hocky_Participants] AS [Hocky_Participants]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__order__C_Id__01142BA1" Association="Self.FK__order__C_Id__01142BA1">
+      <End Role="Customer_tbl" EntitySet="Customer_tbl" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

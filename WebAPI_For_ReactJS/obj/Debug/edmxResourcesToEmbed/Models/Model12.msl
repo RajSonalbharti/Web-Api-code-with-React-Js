@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sonali_123ModelStoreContainer" CdmEntityContainer="sonali_123Entities">
+    <EntitySetMapping Name="Aggregate_Table">
+      <EntityTypeMapping TypeName="sonali_123Model.Aggregate_Table">
+        <MappingFragment StoreEntitySet="Aggregate_Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aggregate_Tbl">
+      <EntityTypeMapping TypeName="sonali_123Model.Aggregate_Tbl">
+        <MappingFragment StoreEntitySet="Aggregate_Tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aggregate_Tbl1">
+      <EntityTypeMapping TypeName="sonali_123Model.Aggregate_Tbl1">
+        <MappingFragment StoreEntitySet="Aggregate_Tbl1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_tbl">
+      <EntityTypeMapping TypeName="sonali_123Model.Customer_tbl">
+        <MappingFragment StoreEntitySet="Customer_tbl">
+          <ScalarProperty Name="C_Id" ColumnName="C_Id" />
+          <ScalarProperty Name="C_Name" ColumnName="C_Name" />
+          <ScalarProperty Name="C_Address" ColumnName="C_Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Manager">
+      <EntityTypeMapping TypeName="sonali_123Model.Employee_Manager">
+        <MappingFragment StoreEntitySet="Employee_Manager">
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Manager_Id" ColumnName="Manager_Id" />
+          <ScalarProperty Name="Manager_salary" ColumnName="Manager_salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groupby_Emp">
+      <EntityTypeMapping TypeName="sonali_123Model.Groupby_Emp">
+        <MappingFragment StoreEntitySet="Groupby_Emp">
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="Dept_Id" ColumnName="Dept_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="sonali_123Model.order">
+        <MappingFragment StoreEntitySet="order">
+          <ScalarProperty Name="Ord_Id" ColumnName="Ord_Id" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price_of_1" ColumnName="Price_of_1" />
+          <ScalarProperty Name="C_Id" ColumnName="C_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher_tbl">
+      <EntityTypeMapping TypeName="sonali_123Model.Teacher_tbl">
+        <MappingFragment StoreEntitySet="Teacher_tbl">
+          <ScalarProperty Name="T_Id" ColumnName="T_Id" />
+          <ScalarProperty Name="T_Name" ColumnName="T_Name" />
+          <ScalarProperty Name="T_Qualification" ColumnName="T_Qualification" />
+          <ScalarProperty Name="T_Salary" ColumnName="T_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher_tbl2">
+      <EntityTypeMapping TypeName="sonali_123Model.Teacher_tbl2">
+        <MappingFragment StoreEntitySet="Teacher_tbl2">
+          <ScalarProperty Name="T_Id" ColumnName="T_Id" />
+          <ScalarProperty Name="T_Name" ColumnName="T_Name" />
+          <ScalarProperty Name="T_Qualification" ColumnName="T_Qualification" />
+          <ScalarProperty Name="T_Salary" ColumnName="T_Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Voter_list">
+      <EntityTypeMapping TypeName="sonali_123Model.Voter_list">
+        <MappingFragment StoreEntitySet="Voter_list">
+          <ScalarProperty Name="Voter_Id" ColumnName="Voter_Id" />
+          <ScalarProperty Name="Voter_Name" ColumnName="Voter_Name" />
+          <ScalarProperty Name="Voter_Age" ColumnName="Voter_Age" />
+          <ScalarProperty Name="Voter_Add" ColumnName="Voter_Add" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department_1">
+      <EntityTypeMapping TypeName="sonali_123Model.Department_1">
+        <MappingFragment StoreEntitySet="Department_1">
+          <ScalarProperty Name="Dept_Id" ColumnName="Dept_Id" />
+          <ScalarProperty Name="Dept_Name" ColumnName="Dept_Name" />
+          <ScalarProperty Name="Dept_Salary" ColumnName="Dept_Salary" />
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="sonali_123Model.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpDpt" ColumnName="EmpDpt" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_1">
+      <EntityTypeMapping TypeName="sonali_123Model.Employee_1">
+        <MappingFragment StoreEntitySet="Employee_1">
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="Emp_Email" ColumnName="Emp_Email" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Football_Participants">
+      <EntityTypeMapping TypeName="sonali_123Model.Football_Participants">
+        <MappingFragment StoreEntitySet="Football_Participants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hocky_Participants">
+      <EntityTypeMapping TypeName="sonali_123Model.Hocky_Participants">
+        <MappingFragment StoreEntitySet="Hocky_Participants">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
