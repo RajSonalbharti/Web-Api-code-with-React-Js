@@ -15,6 +15,27 @@ function BookList(props){
     }
     ,[]);
 
+    const DeleteBook = (id) => {
+        axios.delete(`https://localhost:44375/api/Books/DeleteBook?id=${id}`)
+        .then((result)=>{
+            //alert('data is deletd')
+             const GetData = async () => {
+             const result = await axios.get('https://localhost:44375/api/Books/GetALLBooks');
+                setData(result.data);
+            }
+             GetData();
+        })
+        .catch((error)=>{
+            alert('data is error');
+        });
+    }   
+    
+        const EditBook = (id) => {
+        props.history.push({
+         pathname: '/edit/' + id
+     });
+ };
+ 
     return(
         <div className="animated fadeIn">
         <Row>
@@ -27,7 +48,6 @@ function BookList(props){
                         <Table hover bordered striped responsive size="sm">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
                                     <th>Name</th>
                                     <th>Author</th>
                                     <th>Action</th>
@@ -37,13 +57,12 @@ function BookList(props){
                                 {
                                     data.map((item, idx) => {
                                         return <tr key={idx}>
-                                            <td>{item.Id}</td>
                                             <td>{item.Name}</td>
                                             <td>{item.Author}</td>
                                             <td>
                                                 <div className="btn-group">
-                                                    <button className="btn btn-warning">Edit</button>
-                                                    <button className="btn btn-warning">Delete</button>
+                                                    <button className="btn btn-warning" onClick={()=>EditBook(item.Id)}>Edit</button>
+                                                    <button className="btn btn-warning" onClick={()=>DeleteBook(item.Id)}>Delete</button>
                                                 </div>
                                             </td>
                                         </tr>
@@ -59,6 +78,9 @@ function BookList(props){
 }
 
 export default BookList;
+
+
+
 
 
 
