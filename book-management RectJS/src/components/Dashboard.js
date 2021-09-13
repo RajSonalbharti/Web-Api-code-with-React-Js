@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router , Switch  ,Route, Link} from 'react-router-dom'; 
 import AddBook from './AddBook';
 import BookList from './BookList';
+import EditBook from './EditBook';
 
 function Dashboard(){
     return(
@@ -22,7 +23,8 @@ function Dashboard(){
           <br />
           <Switch>
             <Route exact path='/AddBook' component={AddBook} />           
-            <Route path='/BookList' component={BookList}/>         
+            <Route path='/BookList' component={BookList}/>    
+             <Route path='/edit/:id' component={EditBook}/>    
           </Switch>
         </div>
       </Router>
