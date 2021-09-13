@@ -45,6 +45,68 @@ namespace WebAPI_For_ReactJS.Controllers
         {
             return DB.BookDetails.ToList();
         }
+        [HttpDelete]
+        public object DeleteBook( int id )
+        {
+            try
+            {
+                BookDetail book = DB.BookDetails.FirstOrDefault(X => X.Id == id);
+                DB.BookDetails.Remove(book);
+                DB.SaveChanges();
+                return new Response
+                {
+                    Status = " Success",
+                    Message = "Book deleted"
+                };
+            }
+            catch(Exception ex)
+            {
+                return new Response
+                {
+                    Status = " failed",
+                    Message = ex.Message
+                };
+
+            }
+        }
+
+        [Route("bookDetails")]
+       [HttpGet]
+        public object bookDetailsById(int id)
+        {
+            return DB.BookDetails.Where(book => book.Id == id).ToList().FirstOrDefault();
+        }
+
+        [Route("UpdateBook")]
+        [HttpPut]
+        public object UpdateBook(BookDetails b)
+        {
+            string status = "";
+            string message = "";
+            try
+            {
+                var obj = DB.BookDetails.Where(x => x.Id == b.Id).ToList().FirstOrDefault();
+                if (obj.Id > 0)
+                {
+                    obj.Name = b.Name;
+                    obj.Author = b.Author;
+                    DB.SaveChanges();
+                    status = "Success";
+                    message = "Book updated";                
+                }
+            }
+            catch(Exception ex)
+            {
+                status = " failed";
+                message = "book Updated failed";
+            }
+            return new Response
+            {
+                Status = status,
+                Message = message
+            };
+        }
+
 
       
     }
